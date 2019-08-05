@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="list_details_activity_style" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#3949ab</item>
+        <item name="colorPrimaryDark">#283593</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="edit_text_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">#bdbdbd</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+    <style name="edit_text_cursor_style" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+
+</resources>
