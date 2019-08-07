@@ -48,6 +48,7 @@ class LoginActivity : AppCompatActivity() {
         sign_up_text_view.setOnClickListener {
             val registerIntent = Intent(this,RegisterActivity::class.java)
             startActivity(registerIntent)
+            finish()
         }
 
         login_button.setOnClickListener {
@@ -136,6 +137,7 @@ class LoginActivity : AppCompatActivity() {
             if(user != null){
                 val listActivityIntent = Intent(this,ListActivity::class.java)
                 startActivity(listActivityIntent)
+                finish()
             }
         }
 

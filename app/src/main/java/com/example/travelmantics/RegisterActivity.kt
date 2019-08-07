@@ -3,6 +3,7 @@ package com.example.travelmantics
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -64,6 +65,7 @@ class RegisterActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
 
                     startActivity(Intent(this, ListActivity::class.java))
+                    finish()
                     dialog.dismiss()
                     Toast.makeText(this, "Successfully registered :)", Toast.LENGTH_LONG).show()
                 }else {
@@ -74,5 +76,23 @@ class RegisterActivity : AppCompatActivity() {
         }else {
             Toast.makeText(this,"Please fill up the Credentials :|", Toast.LENGTH_LONG).show()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, LoginActivity::class.java))
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        return when(item?.itemId){
+            android.R.id.home -> {
+                startActivity(Intent(this, LoginActivity::class.java))
+                true
+            }
+            else ->{
+                super.onOptionsItemSelected(item)
+            }
+        }
+
     }
 }

@@ -30,6 +30,12 @@ class ListActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
+     /*   if (mAuth.currentUser == null){
+            val loginActivityIntent = Intent(this,LoginActivity::class.java)
+            startActivity(loginActivityIntent)
+            finish()
+        }*/
+
        val userId = mAuth.uid
 
         mDatabaseReference = FirebaseDatabase.getInstance().reference.child("travel_deals")
